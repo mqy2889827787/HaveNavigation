@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -35,10 +36,10 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textDashboard
+//        dashboardViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 
@@ -49,10 +50,10 @@ class DashboardFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val btnScan: Button = activity?.findViewById<View>(R.id.button) as Button
+        val btnScan: ImageButton = activity?.findViewById<View>(R.id.imageButton) as ImageButton
         btnScan.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-               val integrator = IntentIntegrator.forSupportFragment(this@DashboardFragment)
+                val integrator = IntentIntegrator.forSupportFragment(this@DashboardFragment)
                 // 设置要扫描的条码类型，ONE_D_CODE_TYPES：一维码，QR_CODE_TYPES-二维码
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES)
                 integrator.captureActivity = ScanActivity::class.java
@@ -76,8 +77,8 @@ class DashboardFragment : Fragment() {
                 Toast.makeText(activity, "扫码取消！", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(activity, "扫描成功，条码值: " + result.contents, Toast.LENGTH_LONG).show()
-                val results: TextView = view?.findViewById<View>(R.id.textView) as TextView
-                results.text = result.contents
+//                val results: TextView = view?.findViewById<View>(R.id.textView) as TextView
+//                results.text = result.contents
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)

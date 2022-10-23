@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">HaveNavigation</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="首页">首页</string>
+    <string name="取件">取件</string>
+    <string name="我的">我的</string>
     <string name="ScanButton">Button</string>
     <string name="Result">TextView</string>
 </resources>

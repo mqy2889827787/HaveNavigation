@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            app:srcCompat="@drawable/yt_express"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                android:layout_weight="1"
+                android:text="已到达"
+                tools:ignore="NestedWeights"
+                tools:layout_editor_absoluteX="118dp"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="您的包裹由2号无人车运送"
+                tools:layout_editor_absoluteX="118dp"
+                tools:layout_editor_absoluteY="143dp" />
+        </LinearLayout>
+
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/button2"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.5"
+           android:layout_gravity="center"
+           android:text="扫码取件"
+           tools:layout_editor_absoluteX="298dp"
+           tools:layout_editor_absoluteY="104dp"
+           app:cornerRadius="30dp">
+
+       </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
